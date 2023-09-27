@@ -1,0 +1,103 @@
+/* 'ctrl+/' makes a comment */
+/* I want to change the color of my p tags */
+/* I have to start by telling CSS what I want to change */
+/* List of CSS Selectors:
+        -Element Selector: is going to select all instance of a given tag from our HTML page
+            -body
+            -p */
+p, h1{ /*Select all <p> and anything else with a comma */
+    color: orangered;
+    background-color: rgb(10, 236, 70);
+    /* In CSS we have 3 major ways to refer to a color:
+        -Color keywords
+        -RGB value
+        -Hex Color:
+            -#002255
+            -Each pair of values represents one of our "rgb" values, so a hex color is made of 3 pairs of characters.
+         */
+    
+}
+/* Body selector - What we write before the {} is going to be our selector. A selector is the term for the element(s) on my HTML page which are being edited by this style rule. */
+body{
+    background-image: url(https://i.ibb.co/CsVJZzD/Mount-Merapi-Indonesia.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* I must use a period . to select my class name. This will select all elements with this class name */
+.header {
+    text-align: center;
+}
+/* Compound Selector - It is more than a single selector in one rule */
+/* Change all h tags at the same time */
+h1, h2, h3, h4, h5, h6{
+    /*this will change all h tags*/
+    text-decoration: underline;
+
+}
+
+/* Change a specific tag by selecting an ID */
+/* To select an ID use a #(octothorp) */
+#Unique { 
+    text-decoration: underline overline;
+    background-color: pink;
+    border-radius:25px
+}
+
+
+/* I can focus my selector to work only on .btn classes WITHIN a specific container */
+nav .btn{
+    text-shadow: 2px 2px 2px black
+}
+
+/* Adding a carrot means that it only effects things under nav without any other tags (i.e <span>, <div>, etc. */
+nav> .btn{
+    /* This is going to change the text color using the class */
+    background-color: yellow
+}
+
+/* This selector will only effect the direct children of our nav*/
+
+a{
+    /* This changes color according to tag or element name. */
+    color: darkviolet;
+}
+
+a:link {
+    color: #0808f7
+}
+a:visited {
+    color: orangered;
+}
+
+a:hover{
+    color: black;
+
+}
+
+a:active {
+    color: greenyellow;
+}
+
+/* !CSS Hierarchy
+This is going to allow CSS to use distinct levels of "priority" to style our elements. THe order of priority from weakest to strongest is:
+
+External Stylesheet
+-Element
+-Class
+-ID
+-!important
+
+Internal Stylesheet: 
+-Element
+-Class
+-ID
+-!important
+
+"External Stylesheet is a .css file which is not the html file in which we have our web page
+
+"Inline Stylinh is when I add a "style" property to an element in my HTML file.*/
+
+
+/* We are only going to get back ONE item with a given ID. Unlike a tag name or class, we cannot use the same ID for multiple elements. If we use the same ID multiple time, the styling will still apply. This does not mean we should use it in place of a class. Our browser and JavaScript is only going to pay attention to the first item with a given ID when we start making pages functional.*/
