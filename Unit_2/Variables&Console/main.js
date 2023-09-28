@@ -51,10 +51,6 @@ console.log("Initialization 2: ", x)
 
 apple = 12;
 
-console.log(apple);
-console.log(life);
-
-
 // Assigning to other variables / create variables from variables. 
 
 let firstName = "Kate"; // string datatype

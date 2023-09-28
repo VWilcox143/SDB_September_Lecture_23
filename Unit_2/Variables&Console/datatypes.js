@@ -178,3 +178,4 @@ console.log(inf);
 
 let notAnumber = "string" * 317;
 console.log(notAnumber); // NaN , not a number
+
