@@ -53,12 +53,12 @@ console.log("3" !== 4) // true
 // Less Than
 4 < 6; 
 
-// Greater Than or Equal to
+// Greater Than or Equal to >=
 // ! The Greater than operator must be used before the equal sign in order to work / execute correctly.
 
 console.log( 3 >= 2 ); //True
 
-//Less Than or Equal To, <=
+//Less Than or Equal To <=
 console.log( 1 <= 3 ); //True
 
 // And, &&
