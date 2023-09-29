@@ -87,3 +87,15 @@ if (!rain) {// (rain != true) also works
 //ELSE IF Conditional Statement
 //This can let us check more than one condition (asking multiple questions)
 //Once one of the conditions is met (results in true) it will exit the statement/code block.
+
+//let grade = 92; //This grade is passing! Great Job!
+//let grade = 70; // Not quite passing, reach out to the teacher.
+let grade = 50; // Needs to be reworked and resubmitted.
+
+if (grade >= 75) {
+    console.log('This grade is passing! Great job!')
+} else if (grade >= 69) {
+    console.log('Not quite passing, reach out to the teacher.')
+} else {
+    console.log('Needs to be reworked and resubmitted.')
+}
