@@ -6,7 +6,7 @@
             -body
             -p */
 p, h1{ /*Select all <p> and anything else with a comma */
-    color: orangered;
+    color: rgb(96, 30, 154);
     background-color: rgb(10, 236, 70);
     /* In CSS we have 3 major ways to refer to a color:
         -Color keywords
@@ -97,7 +97,7 @@ Internal Stylesheet:
 
 "External Stylesheet is a .css file which is not the html file in which we have our web page
 
-"Inline Stylinh is when I add a "style" property to an element in my HTML file.*/
+"Inline Styling is when I add a "style" property to an element in my HTML file.*/
 
 
 /* We are only going to get back ONE item with a given ID. Unlike a tag name or class, we cannot use the same ID for multiple elements. If we use the same ID multiple time, the styling will still apply. This does not mean we should use it in place of a class. Our browser and JavaScript is only going to pay attention to the first item with a given ID when we start making pages functional.*/
