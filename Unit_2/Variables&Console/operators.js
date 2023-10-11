@@ -79,7 +79,7 @@ console.log(r); // 5
 
 // Subtraction Operator
 r -= 3; // r = r-3
-
+console.log("-=", r)
 // Multiplication Operator
 r *= 2; // r = r * 2
 
