@@ -8,11 +8,31 @@
 <body>
     <h1>Right click your browser page to open the dev tools</h1>
     <h3>(This is how we can see the browser console!)</h3>
+    <div><button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        Click me to display Date and Time.</button>
+        
+        <p id="demo"></p></div>
+
+        <p id="demo1">JavaScript can change HTML content.</p>
+
+<button type="button" onclick='document.getElementById("demo1").innerHTML = "Hello JavaScript!"'>Click Me!</button>
 
     <!--To connect js file to HTML: Use a script tag.
         The script tag needs to come before the closing body tag.
         Needs an src/source attribute to the file. 
     -->
+    <div><h2>What Can JavaScript Do?</h2>
+
+        <p>JavaScript can change HTML attribute values.</p>
+        
+        <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+        
+        <button onclick="document.getElementById('myImage').src='pic_bulbon.gif'">Turn on the light</button>
+        
+        <img id="myImage" src="pic_bulboff.gif" style="width:100px">
+        
+        <button onclick="document.getElementById('myImage').src='pic_bulboff.gif'">Turn off the light</button></div>
     <script src="./main.js"></script>
 </body>
 </html>

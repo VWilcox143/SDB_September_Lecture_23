@@ -83,6 +83,7 @@ const javaScript = "So much fun!";
 console.log(today, javaScript);
 
 today = "Super!";
-// javaScript = "Meh."; //
+javaScript = "Meh.";
 
 console.log(today, javaScript);
+
