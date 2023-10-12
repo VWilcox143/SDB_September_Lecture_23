@@ -91,9 +91,10 @@ console.log(newName);
 function tipCalc(subTotal) {
     let tip = subTotal * .2;
     let total = subTotal + tip;
-    return total.toFixed(2);
+    console.log(total.toFixed(2))
+    let roundTotal = Math.round(total);
+    return roundTotal;
+    }
 
-}
-
-let total = tipCalc(19.72)
-console.log(total);
+roundTotal = tipCalc(23.67);
+console.log(roundTotal);
