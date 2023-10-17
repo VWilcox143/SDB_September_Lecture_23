@@ -7,7 +7,7 @@
         - Default: Keyword that specifies code to run if no case matches (think what our else did in if statements). 
 */
 
-let officeCharacter = "Pam";
+let officeCharacter = "Michael";
 
 switch (officeCharacter) {
     case "Michael":
