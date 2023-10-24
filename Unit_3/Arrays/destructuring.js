@@ -44,7 +44,8 @@ console.log(Math.min(prices));
 const fullName2 = ['Jane', 'Doe', 'Mrs.', {month: 3, date: 22, year: 1973}, 'testOne', 2, 'test3', 4, true, false];
 
 const [ fName, lName, , , ...otherInfo ] = fullName2
-console.log(fName);
-console.log(lName);
-console.log(otherInfo)
+//console.log(fName);
+//console.log(lName);
+//console.log(otherInfo)
 //console.log(fullName2)
+console.log(fullName2[3].month);
