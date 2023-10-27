@@ -26,7 +26,7 @@ class NewObject {
 
 let one = new NewObject();
 one.name = 'sample';
-//console.log(one);
+console.log(one);
 
 //1     2
 class Item {
