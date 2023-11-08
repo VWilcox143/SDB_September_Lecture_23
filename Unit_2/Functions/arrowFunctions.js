@@ -12,8 +12,8 @@
 */
 
 //! Concise Body
-let yo = () => console.log('Hi');
-
+let yo = () => { console.log('Hi');
+}
 //! Block Body
 let hello = () => {
     let greeting = "hello";

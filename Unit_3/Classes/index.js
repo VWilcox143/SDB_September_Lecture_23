@@ -64,12 +64,12 @@ let iType = 'tomato soup';
 let iDesc = 'canned';
 let iCost = 1.29;
 
-//function processItem(z,x,p) {
+function processItem(z,x,p) {
     //return new Item(z,x,p);
-//};
+};
 
-//let useFunction = processItem(iType, iDesc, iCost);
-//console.log(useFunction); 
+let useFunction = processItem(iType, iDesc, iCost);
+console.log(useFunction); 
 
 //! Methods
 class DeptInventory {
