@@ -19,11 +19,11 @@
 const testEndpoint = 'https://jsonplaceholder.typicode.com/posts/1';
 //console.log(fetch(testEndpoint));
 
-//fetch(testEndpoint)
+fetch(testEndpoint)
     //.then(res => console.log(res)); 
     //.then(res => console.log(res.url));
     //.then(res => console.log(res.body));
-// "res" (response) can be whatever, it's just a placeholder
+//"res" (response) can be whatever, it's just a placeholder
 
 /*
 !JSON
@@ -34,7 +34,7 @@ const testEndpoint = 'https://jsonplaceholder.typicode.com/posts/1';
 * Syntax
     {
             "key": "value",
-            "key": "true",
+            "key": true,
             "key": 0,
     }
 
@@ -57,33 +57,29 @@ function displayIt(info) {
 
     //console.log(info);
     p.textContent = info;
-    
+    //    
     body.appendChild(p);
 }
-
-//* JSON.parse(string);
-let myText = `{"name": "Gollum", "lost_ring": "true"}`;
-console.log(myText);
-let parseJSON = JSON.parse(myText);
-console.log(parseJSON.name);
+//
+////* JSON.parse(string);
+//let myText = `{"name": "Gollum", "lost_ring": true}`;
+//console.log(myText);
+//console.log(JSON.parse(myText));
+//let parseJSON = JSON.parse(myText);
+//console.log(parseJSON.name);
 
 const url = `https://meowfacts.herokuapp.com/`;
 
 //function getCatFacts() {
-//    fetch(url) //Refers to "meowfacts.com"
-//    .then(res => res.json())
-//    .then(obj => {
-//        //console.log(obj);
-//        console.log(obj.data[0]);
-//        displayIt(obj.data[0]);
-//    })
-//}
-//const getCatFacts = async() => {
-//    let res = await fetch(url);
-//    let results = await res.json();
-//    let data = results.data[0];
-//    displayIt(data);
-//}
+    //    fetch(url) //Refers to "meowfacts.com"
+    //        .then(res => res.json())
+    //        .then(obj => {
+        //console.log(obj);
+        //console.log(obj.data);
+        //        console.log(obj.data[0])
+        //        displayIt(obj.data[0]);
+        //    })
+        //}
 
 
 /*
@@ -98,17 +94,30 @@ const url = `https://meowfacts.herokuapp.com/`;
     } catch (err) {
         ... code block to respond error
     }    
-*/    
 
+
+*/
+
+
+        //const getCatFacts = async() => {
+        //    let res = await fetch(url);
+        //    let results = await res.json();
+        //    let data = results.data[0];
+        //    displayIt(data);
+        //}
+        
+        //getCatFacts();
+    
 
 
 const getCatFacts = async() => {
     try{
         let res = await fetch(url);
-        //let res =fetch(url); Displays an Error because res.json had nothing stored.
+        //let res = fetch(url); Displays an Error because res.json had nothing stored.
         let results = await res.json();
         let data = results.data[0];
         displayIt(data);
+        console.log(results);
     } catch (err) {
     console.error(err)
     }
@@ -117,14 +126,14 @@ const getCatFacts = async() => {
 getCatFacts();
 
 //* Local Fetch
-fetch('./local.json')
-    .then(res => res.json())
-    .then(data => {
-        let members = data.fellowship;
-        console.log(members);
-
-        for(m of members) {
-            displayIt(m.name);
-        }
-    })
-    .catch(err => console.error(err));
+//fetch('./local.json')
+//    .then(res => res.json())
+//    .then(data => {
+//        let members = data.fellowship;
+//        console.log(members);
+//        
+//        for(m of members) {
+//            displayIt(m.name);
+//            }
+//        })
+//        .catch(err => console.error(err));

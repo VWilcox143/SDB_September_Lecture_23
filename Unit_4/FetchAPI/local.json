@@ -1,5 +1,5 @@
 {
-    "fellowship": [
+"fellowship": [
     { "name": "Frodo", "race": "hobbit" },
     { "name": "Samwise", "race": "hobbit" },
     { "name": "Merry", "race": "hobbit" },
@@ -9,5 +9,5 @@
     { "name": "Gimli", "race": "dwarf" },
     { "name": "Aragorn", "race": "man" },
     { "name": "Boromir", "race": "man" }
-    ]
+]
 }
