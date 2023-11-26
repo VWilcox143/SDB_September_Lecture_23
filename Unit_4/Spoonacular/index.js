@@ -7,6 +7,7 @@ let buildURL = `${baseURL}/?apiKey=${apiKey}`;
 let storedRecipes = [];
 
 
+
 //! DOM Elements
 const searchForm = document.querySelector('form');
 const randomCard = document.querySelector('.random-card');
