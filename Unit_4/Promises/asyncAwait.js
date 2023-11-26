@@ -34,7 +34,7 @@ getName().then(data => console.log(data));
 //! Await - Tell JS that a promise is being returned and to wait on that result.
 
 async function extraData() {
-    let info = returnData();
+    let info = await returnData();
     return(`${info} in some cloud...`);
 }
 

@@ -16,16 +16,16 @@
 */
 
 //? Mock internet send
-function getData() {
-    setTimeout(() => {
-        return "some data";
-    }, 3000)
-}
+//function getData() {
+//    setTimeout(() => {
+//        return "some data";
+//    }, 3000)
+//}
 
 //let data = getData(); 
 // the value comes "late" - 3 seconds
 //console.log(data); 
-//We get an undefined value because the information is delayed.
+//We get an undefined value because the information is delayed when it is compiled.
 
 function getDataAgain(cb) {
     setTimeout(() => {
@@ -37,20 +37,19 @@ function getDataAgain(cb) {
 //console.log('Hello World');
 
 function returnData() {
-
+    
     return new Promise((resolve, reject) => { //callback function
-            setTimeout(() => {
-                if (true) {
-                    resolve('some data from Promise')
-                    
-                } else {
-                    reject('This is a rejection')
-                }
-            }, 3000)
-    } )
+        setTimeout(() => {
+            if (true) {
+                resolve('some data from Promise')
+                
+            } else {
+                reject('This is a rejection')
+            }
+        }, 3000)
+    })
 }
-
-// console.log(returnData());
+//console.log(returnData());
 
 /*
 !Resolvers
@@ -70,7 +69,7 @@ returnData()
     .then(() => {
         let x = 1;
         let y = 2;
-        console.log(x+y);
+        console.log(x + y);
     })
     .catch(function(err) {
         console.error(`This is in the catch: ${err}`)
