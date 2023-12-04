@@ -11,7 +11,7 @@ let storedRecipes = [];
 //! DOM Elements
 const searchForm = document.querySelector('form');
 const randomCard = document.querySelector('.random-card');
-const keptCards = document.getElementById('kept-cards')
+const keptCards = document.getElementById('kept-cards');
 
 //! Functions
 const removeElements = element => {
@@ -118,7 +118,7 @@ searchForm.addEventListener('submit', e=> {
     fetch(buildURL)
     .then(res => res.json()) 
     .then(data => {
-        //console.log(data.recipes[0])
+        console.log(data.recipes[0])
         let recipe = data.recipes[0];
 
         let obj = {
