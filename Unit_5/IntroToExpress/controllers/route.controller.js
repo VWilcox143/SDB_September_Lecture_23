@@ -37,7 +37,7 @@ router.get('/', (req, res) => {
         - "1" would reference a parameter or flexible string.
             - This could be a n ame of something or anything that we want.
 */
-router.get('/:id',(req, res) => { /* Wild card '*' won't work with this because this "get" meets requirements because ':ID' is a parameter. */
+router.get('found-one/:id',(req, res) => { /* Wild card '*' won't work with this because this "get" meets requirements because ':ID' is a parameter. */
     console.log(req.params);
 
     /*
@@ -64,6 +64,38 @@ router.get('/:id',(req, res) => { /* Wild card '*' won't work with this because 
     }
 })
 
+
+
+router.get('/query', (req,res) => {
+    /*
+    -Anything after the endpoint can be extracted.
+    ex: localhost:4000/routes/query/?firstname="John"
+    */
+
+    try {
+    //console.log(req.query.firstname);
+    const {firstName, lastName} = req.query;
+    // multi query: localhost:4000/query/?firstName=John&lastName=Doe
+
+    if (firstName && lastName) {
+        console.log(firstName, lastName)
+        res.status(200).json({
+            results: {
+                first: firstName,
+                last: lastName,
+                fullName: `${firstName} ${ lastName}`
+            }
+        })
+    } else {
+        throw new Error("Need to supply first and last names");
+    }
+    
+    } catch (err) {
+        res.status(500).json({
+            error: err.message
+        }) 
+    }
+})
 router.get('*', (req, res) => {
     try {
         res.status(200).json({
@@ -74,7 +106,7 @@ router.get('*', (req, res) => {
             error: err.message
         }) 
     }
-/* See line 40*/
 }) 
+    /* See line 40*/
 
 module.exports = router; 

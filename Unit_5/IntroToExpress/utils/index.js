@@ -1,13 +1,14 @@
 function logTime(req,res,next) {
-    //console.log(req);
+    console.log(next);
 
-    let date = new Date();
-    req.datePosted = date.toLocaleDateString();
-    console.log(`DatePosted: `, req.datePosted);
+    let time = new Date();
+    req.timePosted = time.toLocaleTimeString();
+    console.log(`DatePosted: `, req.timePosted);
     next();
+    
 }
-
-module.exports = {
-    logTime: logTime, 
-}
+logTime();
+//module.exports = {
+//    logTime: logTime, 
+//}
 

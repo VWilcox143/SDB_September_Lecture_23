@@ -1,4 +1,4 @@
-const express = require('express'); //being pulled from node_modules.
+const express = require('C:\Users\vaugh\OneDrive\Desktop\PTSB_Sept_2023\Lecture\Unit_5\IntroToExpress\node_modules\express'); //being pulled from node_modules.
 const app = express(); //simplifying the method call
 const PORT = 4000; //server port within localhost. Using 'ALL CAPS' to indicate a general variable.
 
