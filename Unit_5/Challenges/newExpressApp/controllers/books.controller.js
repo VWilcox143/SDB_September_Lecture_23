@@ -38,17 +38,17 @@ router.get("/query", (req, res) => {
   //Query by title
 
   try {
-    if (title) {
-      const { title } = req.query;
-      if (title) {
+    
+      const {title} = req.query;
+      
         console.log(title);
         res.status(200).json({
-          results: results[0].title,
+          results: {
+                title: title,
+          }
         });
-      } else {
-        throw new Error("Unable to find this novel.");
-      }
-    }
+    
+    
   } catch (err) {
     res.status(500).json({
       error: err.message,
