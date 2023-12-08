@@ -1,17 +1,25 @@
 const router = require("express").Router();
 const db = require(`../data.json`);
 
+const errorHandling = (res, err) => {
+  return res.status(500).json({
+    error: err.message,
+});
+}
+
 router.get("/", (req, res) => {
   //Request all
   try {
     res.status(200).json({
       results: db,
+      timestamp: req.timeStamp,
     });
     console.log(db);
   } catch (err) {
-    res.status(500).json({
-      error: err.message,
-    });
+    // res.status(500).json({
+    //   error: err.message,
+    // });
+    errorHandling(res, err)
   }
 });
 
@@ -23,10 +31,14 @@ router.get("/find/:id", (req, res) => {
     let results = db.filter((i) => i.id == id);
 
     console.log(results);
-
+    if(results.length !== 0){
     res.status(200).json({
       results: results[0],
+      timestamp: req.timeStamp,
     });
+  } else {
+    throw new Error('No Book')
+}
   } catch (err) {
     res.status(500).json({
       error: err.message,
@@ -40,14 +52,18 @@ router.get("/query", (req, res) => {
   try {
     
       const {title} = req.query;
+
+      let results = db.filter(i => i.title.toLowerCase() == title.toLowerCase());
       
-        console.log(title);
+        if(results.length > 0){
         res.status(200).json({
-          results: {
-                title: title,
-          }
+          results: results[0],
+          timestamp: req.timeStamp,
+          
         });
-    
+      } else {
+        throw new Error('Title not found')
+      }
     
   } catch (err) {
     res.status(500).json({
@@ -58,10 +74,19 @@ router.get("/query", (req, res) => {
 
 router.post("/", (req, res) => {
   console.log(req.body);
-
+  try {
   const { title, author } = req.body;
 
-  res.status(200).json({ title, author });
+  res.status(200).json({ 
+    title: title, 
+    author: author, 
+    timestamp: req.timeStamp
+  });
+} catch (err) {
+  res.status(500).json({
+    error: err.message,
+})
+};
 });
 
 module.exports = router;

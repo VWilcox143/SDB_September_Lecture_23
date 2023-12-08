@@ -4,7 +4,7 @@ const PORT = 4000;
 
 //* Imports
 const booksController = require(`./controllers/books.controller`);
-const { getTimeStamp }  = require('./utils/timestamp');
+const { getTimeStamp } = require('./utils/timestamp');
 
 
 //*Middleware
