@@ -1,0 +1,237 @@
+{
+	"info": {
+		"_postman_id": "28651391-492b-4fb2-b1c3-54e28a50f1c6",
+		"name": "Movies",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31437525"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first\": \"Derrple\",\r\n    \"last\": \"Sherman\",\r\n    \"email\": \"Pababooey@email.com\",\r\n    \"password\": \"shaboigan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/user/signup",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"user",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Movie",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Star Trek\",\r\n    \"genre\": \"Sci-Fi\",\r\n    \"rating\": \"R\",\r\n    \"length\": 136,\r\n    \"releaseYear\": 1979\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fantastic Four\",\r\n    \"genre\": \"Super-hero movie\",\r\n    \"rating\": \"PG-13\",\r\n    \"length\": 130,\r\n    \"releaseYear\": 2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One By ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fantastic Four\",\r\n    \"genre\": \"Super-hero movie\",\r\n    \"rating\": \"PG-13\",\r\n    \"length\": 130,\r\n    \"releaseYear\": 2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/find-one/{{MOVIEID}}",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						"find-one",
+						"{{MOVIEID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete one",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fantastic Four\",\r\n    \"genre\": \"Super-hero movie\",\r\n    \"rating\": \"PG-13\",\r\n    \"length\": 130,\r\n    \"releaseYear\": 2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/{{MOVIEID}}",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						"{{MOVIEID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch one",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Blade\",\r\n    \"genre\": \"Action\",\r\n    \"rating\": \"PG-13\",\r\n    \"length\": 130,\r\n    \"releaseYear\": 2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/{{MOVIEID}}",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						"{{MOVIEID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All by Genre",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Fantastic Four\",\r\n    \"genre\": \"Super-hero movie\",\r\n    \"rating\": \"PG-13\",\r\n    \"length\": 130,\r\n    \"releaseYear\": 2025\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/movies/genre/Sci-fi",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"movies",
+						"genre",
+						"Sci-fi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\": \"Derrple\",\r\n    \"lastName\": \"Sherman\",\r\n    \"email\": \"Mababooey@email.com\",\r\n    \"password\": \"shaboigan\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{PORT}}/user/login",
+					"host": [
+						"{{PORT}}"
+					],
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

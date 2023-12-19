@@ -1,0 +1,11 @@
+[{
+  "_id": {
+    "$oid": "657b9db6c513cd283f256697"
+  },
+  "title": "Fantastic Four",
+  "genre": "Super-hero movie",
+  "rating": "PG-13",
+  "length": 130,
+  "releaseYear": 2025,
+  "__v": 0
+}]

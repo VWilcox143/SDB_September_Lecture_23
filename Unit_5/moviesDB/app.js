@@ -6,7 +6,7 @@ const mongoose = require('mongoose'); // used from node_modules
 const PORT = process.env.PORT; // points to our env file and puts value of PORT from that variable into this PORT variable.
 const MONGO = process.env.MONGODB; // connection variable from .env
 const userController = require('./controllers/user.controller');
-
+const movieController = require('./controllers/movie.controller');
 
 
 mongoose.connect(`${MONGO}/movies`);
@@ -20,5 +20,6 @@ db.once("open", () => console.log(`Connected to : ${MONGO}/movies`))
 
 app.use(express.json());
 app.use('/user', userController);
+app.use('/movies', movieController);
 
 app.listen(PORT,() => console.log(`Movies: ${PORT}`));
