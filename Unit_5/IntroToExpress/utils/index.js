@@ -8,7 +8,7 @@ function logTime(req,res,next) {
     
 }
 logTime();
-//module.exports = {
-//    logTime: logTime, 
-//}
+module.exports = {
+   logTime: logTime, 
+}
 

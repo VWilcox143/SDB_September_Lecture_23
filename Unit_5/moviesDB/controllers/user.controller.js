@@ -58,7 +58,7 @@ router.post('/login', async(req, res) => {
         const user = await User.findOne({email: email});
         //* MongoDB method that accepts a query as an argument. Returns an instance of a document that matches.
         //console.log(user);
-        if (!user) throw new Error ('E-mail or password does not match');
+        if (!user) throw new Error ('E-mail or password does not match,sucka.');
 
         //3 If email exists, consider if the password matches
 

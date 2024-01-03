@@ -7,7 +7,7 @@ const PORT = process.env.PORT; // points to our env file and puts value of PORT 
 const MONGO = process.env.MONGODB; // connection variable from .env
 const userController = require('./controllers/user.controller');
 const movieController = require('./controllers/movie.controller');
-
+//const validateSession = require('./middleware/validateSession')
 
 mongoose.connect(`${MONGO}/movies`);
 // connection middleware. Establishes route and defining our collection which we are targeting. 
@@ -17,9 +17,9 @@ mongoose.connect(`${MONGO}/movies`);
 const db = mongoose.connection; //event listener to check if connected.
 
 db.once("open", () => console.log(`Connected to : ${MONGO}/movies`))
-
 app.use(express.json());
 app.use('/user', userController);
+//app.use(validateSession); //all routes below this middleware require validation when used this way.
 app.use('/movies', movieController);
 
 app.listen(PORT,() => console.log(`Movies: ${PORT}`));
