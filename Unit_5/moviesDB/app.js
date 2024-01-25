@@ -8,6 +8,7 @@ const MONGO = process.env.MONGODB; // connection variable from .env
 const userController = require('./controllers/user.controller');
 const movieController = require('./controllers/movie.controller');
 //const validateSession = require('./middleware/validateSession')
+const cors = require('cors'); //! <--Added
 
 mongoose.connect(`${MONGO}/movies`);
 // connection middleware. Establishes route and defining our collection which we are targeting. 
@@ -18,6 +19,7 @@ const db = mongoose.connection; //event listener to check if connected.
 
 db.once("open", () => console.log(`Connected to : ${MONGO}/movies`))
 app.use(express.json());
+app.use(cors()); //! <--Added
 app.use('/user', userController);
 //app.use(validateSession); //all routes below this middleware require validation when used this way.
 app.use('/movies', movieController);
